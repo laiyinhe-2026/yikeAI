@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>教学板块 - 美术 AI 内容创作 SaaS</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="teaching">
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="主导航">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">
+            <span class="logo-stroke"></span>
+            <span class="logo-dot"></span>
+          </span>
+          <span class="brand-text">
+            <strong>艺课 AI</strong>
+            <small>美术内容创作平台</small>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="展开导航" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="./index.html" data-nav="home">首页</a>
+          <a href="./admissions.html" data-nav="admissions">招生板块</a>
+          <a href="./teaching.html" data-nav="teaching">教学板块</a>
+          <a href="./community.html" data-nav="community">创作社区</a>
+          <a href="./pricing.html" data-nav="pricing">会员方案</a>
+        </div>
+        <a class="nav-action" href="#generator">开始备课</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero section">
+        <p class="eyebrow">教学板块</p>
+        <h1>教案、PPT、作业点评，减轻备课和课后反馈压力</h1>
+        <p>
+          围绕美术教学的真实工作流，帮助老师快速整理课堂目标、教学步骤、展示内容和学生反馈。
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="template-grid" id="teachingTemplates"></div>
+      </section>
+
+      <section class="creator-section section" id="generator">
+        <div class="section-heading">
+          <p class="eyebrow">教学内容生成器</p>
+          <h2>把课堂主题转化为可执行的教学资料</h2>
+          <p>不同生成类型会切换对应 mock 结果，方便演示产品能力。</p>
+        </div>
+        <div class="creator-layout">
+          <form class="creator-form js-generator" data-generator="teaching">
+            <div class="field">
+              <label for="teachingType">生成类型</label>
+              <select id="teachingType" name="type" class="js-type">
+                <option value="教案生成">教案生成</option>
+                <option value="PPT生成">PPT生成</option>
+                <option value="作业点评">作业点评</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="lessonTheme">课程主题</label>
+                <input id="lessonTheme" name="lessonTheme" type="text" value="夏日里的奇妙植物园" />
+              </div>
+              <div class="field">
+                <label for="studentAge">学生年龄</label>
+                <input id="studentAge" name="studentAge" type="text" value="7-9 岁" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="courseType">课程类型</label>
+              <input id="courseType" name="courseType" type="text" value="创意美术" />
+            </div>
+            <div class="field">
+              <label for="goal">教学目标</label>
+              <textarea id="goal" name="goal" rows="4">希望孩子理解植物造型、色彩层次和画面主体关系，并完成一幅主题作品。</textarea>
+            </div>
+            <button class="btn primary full js-generate" type="submit">生成内容</button>
+          </form>
+
+          <article class="result-panel">
+            <div class="result-header">
+              <div>
+                <p class="eyebrow">生成结果</p>
+                <h3 class="js-result-title">教案生成</h3>
+              </div>
+              <span class="soft-badge">教学草稿</span>
+            </div>
+            <div class="result-content js-result-content"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

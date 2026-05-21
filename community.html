@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>社区 - 艺课 AI</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="home-page community-page" data-page="community">
+    <header class="site-header home-header community-header">
+      <nav class="home-nav nav-shell" aria-label="社区导航">
+        <a class="home-brand" href="./index.html" aria-label="艺课首页">
+          <span class="home-brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <strong>艺课</strong>
+          <i></i>
+          <span class="home-brand-copy">
+            <span>一站式美术教学创作平台</span>
+            <span>美术机构招生生成工作台</span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="展开导航" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links home-links">
+          <a href="./index.html" data-nav="home">首页</a>
+          <a href="./community.html" data-nav="community">社区</a>
+          <a href="./pricing.html">会员</a>
+          <a href="./activities.html" data-nav="activities">课程活动中心</a>
+          <a href="./admissions.html" data-nav="workbench">工作台</a>
+        </div>
+
+        <a class="home-login" href="./admissions.html">登录</a>
+      </nav>
+    </header>
+
+    <main class="community-main">
+      <section class="community-tabs" aria-label="作品筛选">
+        <button class="community-tab active" type="button" data-community-filter="featured">精选作品</button>
+        <button class="community-tab" type="button" data-community-filter="recent">最近发布</button>
+        <button class="community-tab" type="button" data-community-filter="favorites">收藏最多</button>
+        <button class="community-tab" type="button" data-community-filter="downloads">下载最多</button>
+      </section>
+
+      <section class="community-grid" id="communityWorks" aria-label="社区作品列表"></section>
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="./community.js"></script>
+  </body>
+</html>
